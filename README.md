@@ -13,10 +13,11 @@ This project demonstrates a simple TCP client-server communication setup using C
 
 ```
 SocketProgramming/
-├── client.cpp    # Client-side logic
-├── server.cpp    # Server-side logic
-├── message.h     # Shared data structure and serialization helpers
-└── main.cpp      # Entry point to run both client and server with threads
+├── include/
+│   ├── server.h    # Server-side logic
+│   ├── client.h    # Client-side logic
+│   └── message.h     # Shared data structure and serialization helpers
+└── main.cpp          # Entry point to run both client and server with threads
 ```
 
 ## 🛠️ Process Structure
@@ -47,3 +48,22 @@ SocketProgramming/
 - **Main Thread**: Launches both client and server in separate threads
 - **Server Thread**: Handles incoming connections and data processing
 - **Client Thread**: Manages connection establishment and data transmission
+
+## 🚀 How to Run
+
+1. Compile the project using a C++ compiler with Winsock2 library
+2. Run the executable - main.cpp will start both server and client threads
+3. The client will automatically connect to the server and exchange messages
+4. Monitor console output for communication flow
+
+## 📋 Requirements
+
+- Windows OS
+- C++ Compiler (Visual Studio, MinGW, etc.)
+- Winsock2 library (ws2_32.lib)
+
+## 🔧 Compilation
+
+```bash
+g++ -o SocketProgramming main.cpp include/server.cpp include/client.cpp -lws2_32
+```

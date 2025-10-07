@@ -62,8 +62,5 @@ SocketProgramming/
 - C++ Compiler (Visual Studio, MinGW, etc.)
 - Winsock2 library (ws2_32.lib)
 
-## 🔧 Compilation
 
-```bash
-g++ -o SocketProgramming main.cpp include/server.cpp include/client.cpp -lws2_32
-```
+

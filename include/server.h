@@ -57,7 +57,7 @@ void Server() {
         return ;
     }
 
-    vector<uint8_t> buffer(sizeof(Message));
+    std::vector<uint8_t> buffer(sizeof(Message));
     int received = recv(client_fd, reinterpret_cast<char*>(buffer.data()), buffer.size(), 0);
     if (received <= 0) {
         std::cerr << "recv() is unsuccessfull !"<<std::endl;

@@ -1,0 +1,10 @@
+libdir=C:/Users/DEV10/Desktop/SocketProject/out/install/Visual Studio Professional 2017 Release - amd64_x86/lib
+includedir=C:/Users/DEV10/Desktop/SocketProject/out/install/Visual Studio Professional 2017 Release - amd64_x86/include
+
+Name: gmock
+Description: GoogleMock (without main() function)
+Version: 1.16.0
+URL: https://github.com/google/googletest
+Requires: gtest = 1.16.0
+Libs: -L${libdir} -lgmock 
+Cflags: -I${includedir} -DGTEST_HAS_PTHREAD=0

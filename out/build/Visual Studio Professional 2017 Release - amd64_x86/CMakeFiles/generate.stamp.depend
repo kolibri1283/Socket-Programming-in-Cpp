@@ -1,0 +1,25 @@
+# CMake generation dependency list for this directory.
+C:/Users/DEV10/Desktop/SocketProject/CMakeLists.txt
+C:/Users/DEV10/Desktop/SocketProject/out/build/Visual Studio Professional 2017 Release - amd64_x86/CMakeFiles/3.11.4/CMakeSystem.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Users/DEV10/Desktop/SocketProject/out/build/Visual Studio Professional 2017 Release - amd64_x86/CMakeFiles/3.11.4/CMakeCCompiler.cmake
+C:/Users/DEV10/Desktop/SocketProject/out/build/Visual Studio Professional 2017 Release - amd64_x86/CMakeFiles/3.11.4/CMakeCXXCompiler.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeSystemSpecificInformation.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeGenericSystem.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeInitializeConfigs.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Platform/Windows.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Platform/WindowsPaths.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeCInformation.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeLanguageInformation.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Platform/Windows-MSVC-C.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Platform/Windows-MSVC.cmake
+C:/Users/DEV10/Desktop/SocketProject/out/build/Visual Studio Professional 2017 Release - amd64_x86/CMakeFiles/3.11.4/CMakeRCCompiler.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeRCInformation.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeCommonLanguageInclude.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeCXXInformation.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeLanguageInformation.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Compiler/MSVC-CXX.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/Platform/Windows-MSVC.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CMakeCommonLanguageInclude.cmake

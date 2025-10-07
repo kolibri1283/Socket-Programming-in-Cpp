@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/Users/DEV10/Desktop/SocketProject/googletest/googlemock/CMakeLists.txt
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/FindThreads.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CheckLibraryExists.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CheckSymbolExists.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/CheckIncludeFile.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/FindPackageHandleStandardArgs.cmake
+C:/Projects/dev/application/cots/cmake-3.11.4-win64-x64/share/cmake-3.11/Modules/FindPackageMessage.cmake
+C:/Users/DEV10/Desktop/SocketProject/googletest/googlemock/cmake/gmock.pc.in
+C:/Users/DEV10/Desktop/SocketProject/googletest/googlemock/cmake/gmock_main.pc.in

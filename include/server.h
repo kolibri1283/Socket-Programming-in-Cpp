@@ -7,10 +7,8 @@
 
 #pragma comment(lib, "ws2_32.lib")  
 
-
-
 void Server() {
-    // Winsock başlat
+    // Starting winsock
     WSADATA wsaData;
     int wsaResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
     if (wsaResult != 0) {
@@ -18,7 +16,7 @@ void Server() {
         return ;
     }
 
-    int server_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    SOCKET server_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (server_fd == INVALID_SOCKET) {
         std::cerr << "Socket did not created: " << WSAGetLastError() <<std::endl;
         WSACleanup();
@@ -47,7 +45,7 @@ void Server() {
 
     std::cout << "Server: Waiting for connection...\n";
 
-    int client_fd;
+    SOCKET client_fd;
     int client_len = sizeof(client_addr);
     client_fd = accept(server_fd, (sockaddr*)&client_addr, &client_len);
     if (client_fd == INVALID_SOCKET) {
@@ -58,7 +56,7 @@ void Server() {
     }
 
     std::vector<uint8_t> buffer(sizeof(Message));
-    int received = recv(client_fd, reinterpret_cast<char*>(buffer.data()), buffer.size(), 0);
+    int received = recv(client_fd, reinterpret_cast<char*>(buffer.data()), static_cast<int>(buffer.size()), 0);
     if (received <= 0) {
         std::cerr << "recv() is unsuccessfull !"<<std::endl;
         closesocket(client_fd);
@@ -76,14 +74,7 @@ void Server() {
 
     Message receivedData = deserialize<Message>(buffer);
 
-    /*cout << "Server: Incoming informations\n";
-    cout << "Message: " << receivedData.mesaj << "\n";
-    cout << "Name: " << receivedData.isim << "\n";
-    cout << "Surname: " << receivedData.soyisim << "\n";
-    cout << "Age: " << receivedData.yas << "\n";
-    cout << "Height: " << receivedData.boy << "\n";
-    cout << "Is it active?: " << (receivedData.aktif ? "Yes" : "No") << "\n";
-*/
+    std::cout << "Server: Data received from client."<<std::endl;
     closesocket(client_fd);
     closesocket(server_fd);
     WSACleanup();

@@ -2,24 +2,23 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <vector>
+#include <cstring>
 #include "message.h"
 
 #pragma comment(lib, "ws2_32.lib")  
-
-using namespace std;
 
 void  Client(const Message &msg) {
     // Starting the Winsock
     WSADATA wsaData;
     int wsaResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
     if (wsaResult != 0) {
-        cerr << "WSAStartup Unsuccesfull: " << wsaResult << endl;
+        std::cerr << "WSAStartup Unsuccesfull: " << wsaResult << std::endl;
         return ;
     }
 
     SOCKET sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sock == INVALID_SOCKET) {
-        cerr << "Socket is not created: " << WSAGetLastError() << endl;
+        std::cerr << "Socket is not created: " << WSAGetLastError() << std::endl;
         WSACleanup();
         return ;
     }
@@ -30,28 +29,21 @@ void  Client(const Message &msg) {
     inet_pton(AF_INET, "127.0.0.1", &server.sin_addr);
 
     if (connect(sock, (sockaddr*)&server, sizeof(server)) == SOCKET_ERROR) {
-        cerr << "Connection error: " << WSAGetLastError() << endl;
+        std::cerr << "Connection error: " << WSAGetLastError() << std::endl;
         closesocket(sock);
         WSACleanup();
         return ;
     }
 
-    /*Message dataToSend = {
-        "Hi,This my first socket program!",
-        "Atakan",
-        "Bektaş",
-        22,
-        1.82,
-        true
-    };*/
+    
 
-    vector<uint8_t> buffer = serialize(msg);
+    std::vector<uint8_t> buffer = serialize(msg);
 
-    int sent = send(sock, reinterpret_cast<const char*>(buffer.data()), buffer.size(), 0);
+    int sent = send(sock, reinterpret_cast<const char*>(buffer.data()), static_cast<int>(buffer.size()), 0);
     if (sent == SOCKET_ERROR) {
-        cerr << "Data could not send: " << WSAGetLastError() << endl;
+        std::cerr << "Data could not send: " << WSAGetLastError() << std::endl;
     } else {
-        cout << "Client: Mesage is sent. Size: " << sent << " bayt\n";
+        std::cout << "Client: Mesage is sent. Size: " << sent << " bayt\n";
     }
 
     closesocket(sock);

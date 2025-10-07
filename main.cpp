@@ -1,7 +1,8 @@
 #include <iostream>
-#include "lib/message.h"
-#include "lib/client.h"
-#include "lib/server.h"
+#include "include/message.h"
+#include "include/client.h"
+#include "include/server.h"
+#include <chrono>
 #include <thread>
 /*#include <gtest/gtest.h>*/
 

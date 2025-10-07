@@ -10,8 +10,8 @@ int main() {
     
     Message msg = {
         "Hi,This is my first socket program!",
-        "Atakan",
-        "Bektas",
+        "YourName",
+        "YourSurname",
         22,
         1.82,
         true
